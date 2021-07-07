@@ -1,6 +1,7 @@
 /* global Phaser */
 $(document).ready(function () {
     'use strict';
+    document.body.style.background = "url('https://cdn5.f-cdn.com/contestentries/1372733/23861931/5b4e13892e088_thumb900.jpg')";
     window.opspark = window.opspark || {};
     let 
         opspark = window.opspark,
@@ -8,7 +9,9 @@ $(document).ready(function () {
         lives = 3;
         
     function create() {
+       game.add.image(0, 0, "background");
         game.opspark.init();
+
         
         opspark.platform.factory(game);
         opspark.platform.init(game);
